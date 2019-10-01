@@ -1,0 +1,38 @@
+@import 'components/atoms/style';
+@import 'components/molecules/style';
+@import 'components/organisms/style';
+@import 'components/templates/style';
+@import 'tail';
+
+// global --- modificaitons
+@import 'scss/mods';
+
+
+
+//@tailwind base;
+//
+//// @tailwind components;
+//
+//// @tailwind utilities;
+//
+//
+//
+///** Tailwind base styles – includes modified normalize.css */
+//@tailwind preflight;
+//
+///** Tailwind plugins – included in tailwind.js */
+//@tailwind components;
+//
+///**
+// * Sage’s styles
+// *
+// * Placing these here allows you to use @apply
+// * to apply Tailwind’s utilities
+// */
+//
+///** Tailwind utilities – generated from config in tailwind.js */
+//@tailwind utilities;
+
+*{
+  color:green!important;
+}

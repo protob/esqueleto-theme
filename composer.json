@@ -1,0 +1,59 @@
+{
+  "name": "Esqueleto-theme",
+  "description": "Modern Wordpress skeleton theme focusing on modularity",
+  "type": "wordpress-theme",
+  "authors": [],
+  "autoload": {
+    "psr-4": {
+      "Esq\\": "backend/"
+    }
+  },
+  "scripts": {
+    "post-install-cmd": [
+      "@set-up-php-lint",
+      "@build-deps"
+    ],
+    "post-update-cmd": [
+      "@set-up-php-lint",
+      "@build-deps"
+    ],
+    "build-deps": [
+      "cd frontend && yarn"
+    ],
+    "build-app": [
+      "cd frontend && yarn build"
+    ],
+    "build": [
+      "@build-deps",
+      "@build-app",
+      "@update-version"
+    ],
+    "set-up-php-lint": [
+      "phpcs --config-set installed_paths vendor/wp-coding-standards/wpcs/",
+      "phpcs --config-set default_standard ./phpcs.xml",
+      "phpcs --config-set show_progress 1",
+      "phpcs --config-set colors 1",
+      "phpcs --config-set show_warnings 1",
+      "phpcs --config-set ignore_warnings_on_exit 1"
+    ],
+    "update-version": [
+      "version"
+    ],
+    "lint": [
+      "@php-lint",
+      "cd frontend && yarn lint"
+    ],
+    "php-lint": [
+      "phpcs . --extensions=php"
+    ],
+    "organism": [
+      "cd frontend && bash createPattern.sh organisms "
+    ],
+    "molecule": [
+      "cd frontend && bash createPattern.sh molecules "
+    ],
+    "atom": [
+      "cd frontend && bash createPattern.sh atoms "
+    ]
+  }
+}
