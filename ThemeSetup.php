@@ -32,7 +32,7 @@ class ThemeSetup {
     public static function activate() {
         global $wp_version;
 
-        if ( version_compare( $wp_version, LEAN_MINIMUM_WP_VERSION, '<' ) ) {
+        if ( version_compare( $wp_version, 'ESQUELETO_MINIMUM_WP_VERSION', '<' ) ) {
             if ( is_admin() ) :
                 add_action(
                     'admin_notices',
@@ -172,7 +172,7 @@ class ThemeSetup {
      * Function used to generate the version number based from the .deploy file.
      */
     private static function get_version_number() {
-        $version_number = 0.1;
+        $version_number = "1.0";
         return $version_number;
     }
 }

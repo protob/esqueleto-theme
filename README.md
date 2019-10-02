@@ -7,4 +7,4 @@ Webpack / ES6+ / Vue.js / SASS / Tailwind.css / Atomic design
 
 
 The theme is based on 
-[Lean theme](https://github.com/wearenolte/lean-theme). Modified to personal preferences.
+[Lean theme](https://github.com/weareEsq/lean-theme). Modified to personal preferences.
